@@ -1,7 +1,5 @@
 package com.moli.singleton;
 
-import org.omg.SendingContext.RunTime;
-
 /**
  * @author moli
  * @time 2024-02-22 15:15:10
