@@ -40,3 +40,30 @@ class BeanHungryStatic {
     }
 }
 
+class BeanHungryStaticOuter {
+
+    // 1. 构造器私有化
+    private BeanHungryStaticOuter() {
+    }
+
+    private static class BeanHungryStaticInner {
+        private static BeanHungryStaticInner INSTANCE = new BeanHungryStaticInner();
+    }
+
+    // 2. 类的内部创建实例供给外部使用
+    private static final BeanHungryStaticOuter INSTANCE;
+
+    static {
+        INSTANCE = new BeanHungryStaticOuter();
+    }
+
+    // 3. 公共返回外部
+    public static BeanHungryStaticOuter getBean() {
+        return INSTANCE;
+    }
+
+    public static BeanHungryStaticInner getInnerBean() {
+        return BeanHungryStaticInner.INSTANCE;
+    }
+}
+
