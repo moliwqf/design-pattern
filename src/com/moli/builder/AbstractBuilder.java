@@ -15,15 +15,11 @@ public abstract class AbstractBuilder {
 
     public abstract void partC();
 
-    public void build() {
-        partA();
-        partB();
-        partC();
+    public House build() {
+        return house;
     }
 
     public AbstractBuilder(House house) {
         this.house = house;
     }
-
-    public House getHouse() {return house;}
 }

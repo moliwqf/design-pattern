@@ -13,6 +13,11 @@ public class BuilderPattern {
 
     public static void construct() {
         AbstractBuilder builder = new HouseBuilder(new House());
+        // 将构建流程交给指挥者
+        builder.partB();
+        builder.partA();
+        builder.partC();
+        // 返回最后结果
         builder.build();
     }
 }
