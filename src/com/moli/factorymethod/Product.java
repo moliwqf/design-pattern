@@ -3,7 +3,7 @@ package com.moli.factorymethod;
 /**
  * @author moli
  * @time 2024-02-22 16:28:48
- * @description TODO
+ * @description 工厂需要创建的对象
  */
 public class Product {
 
